@@ -18,7 +18,7 @@ dbReq.onerror = err => {
 
 const saveRecord = record => {
   db
-    .transaction("pending", "readwrite")
+    .transaction(["pending"], "readwrite")
     .objectStore("pending")
     .add(record);
 };
