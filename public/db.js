@@ -9,7 +9,8 @@ dbReq.onupgradedneeded = e => {
 
 dbReq.onsuccess = e => {
   db = e.target.result;
-  if (navigator.onLine) {checkDBConnection()};
+  // saveRecord();
+  if (navigator.onLine) {saveRecord()};
 };
 
 dbReq.onerror = err => {
